@@ -2,6 +2,7 @@ package com.serenitydojo;
 
 import org.junit.Assert;
 import org.junit.Test;
+import static com.serenitydojo.Cat.usualFood;
 
 public class WhenCreatingObjects {
     @Test
@@ -38,6 +39,17 @@ public class WhenCreatingObjects {
 
 
 
+    }
+    @Test
+    public void cat_making_sound(){
+        Cat felix = new Cat("Felix",4);
+        Cat spot = new Cat("Spot","Salmon",3);
+
+        System.out.println("Cats favorite food is " + usualFood());
+        felix.makeSound();
+        spot.makeSound();
+        felix.feed("Tuna");
+        felix.groom();
     }
 
 
